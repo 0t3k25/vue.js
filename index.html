@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+      
+    <div id="app-2">
+      <span v-bind:title="message">
+        Hover your mouse over me for a few seconds
+        to see my dynamically bound title!
+      </span>
+    </div>
+      
+    <div id="app-3">
+      <span v-if="seen">Now you see me</span>
+    </div>
+    
+    <div id="app-4">
+      <ol>
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+    </div>
+
+    <div id="app-5">
+      <p>{{message}}</p>
+      <button v-on:click="reverseMessage">reverseMessage</button>
+    </div>
+
+    <div id="app-6">
+      <p>{{message}}</p>
+      <input v-model="message">
+    </div>
+
+    <div id="app-8">
+      <ol>
+        <container
+        v-for="sex in ero"
+        v-bind:todo="sex"
+        v-bind:key="sex.id"
+        />
+      </ol>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
